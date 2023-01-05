@@ -11,6 +11,7 @@ RUN apk add --no-cache gcc && \
 
 
 FROM base
+RUN apk upgrade
 ENV         PYTHONUNBUFFERED=1
 WORKDIR /app
 COPY --from=builder /app /app
